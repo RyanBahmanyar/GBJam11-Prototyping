@@ -437,62 +437,29 @@
                     ],
                     "updateScript": [
                         {
-                            "command": "EVENT_SET_INPUT_SCRIPT",
+                            "command": "EVENT_ACTOR_SET_POSITION",
                             "args": {
-                                "input": [
-                                    "b"
-                                ],
-                                "override": false,
-                                "__scriptTabs": "press",
-                                "__comment": true
+                                "actorId": "$self$",
+                                "x": {
+                                    "type": "variable",
+                                    "value": "1"
+                                },
+                                "y": {
+                                    "type": "number",
+                                    "value": 16
+                                },
+                                "__collapse": false
                             },
-                            "children": {
-                                "true": [
-                                    {
-                                        "command": "EVENT_IF_TRUE",
-                                        "args": {
-                                            "variable": "0",
-                                            "__collapseElse": false
-                                        },
-                                        "children": {
-                                            "true": [
-                                                {
-                                                    "command": "EVENT_ACTOR_DEACTIVATE",
-                                                    "args": {
-                                                        "actorId": "$self$"
-                                                    },
-                                                    "id": "e1ecd63f-9baa-4ed4-b877-2292ddb558c8"
-                                                },
-                                                {
-                                                    "command": "EVENT_SET_FALSE",
-                                                    "args": {
-                                                        "variable": "0"
-                                                    },
-                                                    "id": "d344cfe2-03e8-498c-af8b-6066da94043a"
-                                                }
-                                            ],
-                                            "false": [
-                                                {
-                                                    "command": "EVENT_ACTOR_ACTIVATE",
-                                                    "args": {
-                                                        "actorId": "$self$"
-                                                    },
-                                                    "id": "6790b6ab-4c6a-405d-a77c-7b09c0641e6e"
-                                                },
-                                                {
-                                                    "command": "EVENT_SET_TRUE",
-                                                    "args": {
-                                                        "variable": "0"
-                                                    },
-                                                    "id": "6f2e27de-0e8d-44e8-a37c-4214c11fccbd"
-                                                }
-                                            ]
-                                        },
-                                        "id": "26bb018d-bef0-41f3-a21a-dc4fab08bccb"
-                                    }
-                                ]
+                            "id": "8592be1e-7dd2-4311-ba46-8aa1bc37d155"
+                        },
+                        {
+                            "command": "EVENT_ACTOR_GET_POSITION",
+                            "args": {
+                                "actorId": "player",
+                                "vectorX": "1",
+                                "vectorY": "L0"
                             },
-                            "id": "7dfc78f8-279b-43bd-8b7e-43bc68dd8e5d"
+                            "id": "fb25c479-dbb6-416b-a93c-42f7bd9f35a8"
                         }
                     ],
                     "hit1Script": [],
@@ -6606,6 +6573,11 @@
             "id": "0",
             "name": "Tractor Beam Active",
             "symbol": "var_tractor_beam_active"
+        },
+        {
+            "id": "1",
+            "name": "PlayerPositionX",
+            "symbol": "var_playerpositionx"
         }
     ],
     "engineFieldValues": [
