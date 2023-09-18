@@ -382,110 +382,6 @@
             "y": 137,
             "actors": [
                 {
-                    "name": "Block",
-                    "frame": 0,
-                    "animate": false,
-                    "spriteSheetId": "6b821dfc-5e1a-4314-ac2b-295bf6f7753f",
-                    "direction": "down",
-                    "moveSpeed": 1,
-                    "animSpeed": 15,
-                    "paletteId": "",
-                    "isPinned": false,
-                    "persistent": false,
-                    "symbol": "actor_0",
-                    "script": [],
-                    "startScript": [],
-                    "updateScript": [
-                        {
-                            "command": "EVENT_IF_TRUE",
-                            "args": {
-                                "variable": "0",
-                                "__collapseElse": false
-                            },
-                            "children": {
-                                "true": [
-                                    {
-                                        "command": "EVENT_VARIABLE_MATH_EVALUATE",
-                                        "args": {
-                                            "variable": "L0",
-                                            "expression": "abs($02$ - $01$)"
-                                        },
-                                        "id": "dfc01145-0ae5-4189-b5ad-fac0dce58e07"
-                                    },
-                                    {
-                                        "command": "EVENT_IF_EXPRESSION",
-                                        "args": {
-                                            "expression": "abs($02$ - $01$ - 1) <= 1",
-                                            "__collapseElse": false
-                                        },
-                                        "children": {
-                                            "true": [
-                                                {
-                                                    "command": "EVENT_ACTOR_MOVE_RELATIVE",
-                                                    "args": {
-                                                        "actorId": "$self$",
-                                                        "x": 0,
-                                                        "y": -1,
-                                                        "moveType": "horizontal",
-                                                        "useCollisions": true
-                                                    },
-                                                    "id": "ccbcd35d-3d31-4c5d-8434-599d0430eeec"
-                                                }
-                                            ],
-                                            "false": [
-                                                {
-                                                    "command": "EVENT_ACTOR_MOVE_RELATIVE",
-                                                    "args": {
-                                                        "actorId": "$self$",
-                                                        "x": 0,
-                                                        "y": 1,
-                                                        "moveType": "horizontal",
-                                                        "useCollisions": true,
-                                                        "__comment": false,
-                                                        "__collapse": false
-                                                    },
-                                                    "id": "ef83be04-e233-40d4-ac66-dc5ba6ce2be4"
-                                                }
-                                            ]
-                                        },
-                                        "id": "45b3c90d-f26e-4bc9-bbd8-736413cd90f9"
-                                    }
-                                ],
-                                "false": [
-                                    {
-                                        "command": "EVENT_ACTOR_MOVE_RELATIVE",
-                                        "args": {
-                                            "actorId": "$self$",
-                                            "x": 0,
-                                            "y": 1,
-                                            "moveType": "horizontal",
-                                            "useCollisions": true,
-                                            "__comment": false
-                                        },
-                                        "id": "7ea8a905-a773-412f-905d-5e37f202dc86"
-                                    }
-                                ]
-                            },
-                            "id": "99cee802-c2e1-48eb-8d03-d836e46a7251"
-                        },
-                        {
-                            "command": "EVENT_ACTOR_GET_POSITION",
-                            "args": {
-                                "actorId": "$self$",
-                                "vectorX": "2",
-                                "vectorY": "L0"
-                            },
-                            "id": "835923f3-a905-4170-ad5c-d06c1b7df6e8"
-                        }
-                    ],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": [],
-                    "id": "0d8d0ef8-a3fa-4c20-ad46-3cb931fe076e",
-                    "x": 13,
-                    "y": 16
-                },
-                {
                     "name": "Tractor Beam",
                     "frame": 0,
                     "animate": false,
@@ -527,7 +423,7 @@
                                 },
                                 "y": {
                                     "type": "number",
-                                    "value": 17
+                                    "value": 16
                                 },
                                 "__collapse": false
                             },
@@ -548,7 +444,85 @@
                     "hit3Script": [],
                     "id": "2c3759bf-1b4b-4336-a4f5-a31ec780440b",
                     "x": 9,
-                    "y": 17
+                    "y": 16
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "6b821dfc-5e1a-4314-ac2b-295bf6f7753f",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 15,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "persistent": false,
+                    "collisionGroup": "",
+                    "symbol": "actor_0",
+                    "script": [],
+                    "startScript": [],
+                    "updateScript": [
+                        {
+                            "command": "EVENT_CALL_CUSTOM_EVENT",
+                            "args": {
+                                "customEventId": "ffff0481-aef8-4be9-90cb-e26caafc2dec",
+                                "$variable[V0]$": {
+                                    "type": "variable",
+                                    "value": "0"
+                                },
+                                "$variable[V1]$": {
+                                    "type": "variable",
+                                    "value": "2"
+                                }
+                            },
+                            "id": "6d138e15-9866-48b7-8f91-039e02b3e722"
+                        }
+                    ],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "36cc7ea3-45ac-43e4-b735-824e4a9646c6",
+                    "x": 13,
+                    "y": 16
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "d2e2b59a-02ef-4767-9726-d0f9ecba1d21",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 15,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "persistent": false,
+                    "collisionGroup": "",
+                    "symbol": "actor_2",
+                    "script": [],
+                    "startScript": [],
+                    "updateScript": [
+                        {
+                            "command": "EVENT_CALL_CUSTOM_EVENT",
+                            "args": {
+                                "customEventId": "ffff0481-aef8-4be9-90cb-e26caafc2dec",
+                                "$variable[V0]$": {
+                                    "type": "variable",
+                                    "value": "0"
+                                },
+                                "$variable[V1]$": {
+                                    "type": "variable",
+                                    "value": "3"
+                                }
+                            },
+                            "id": "6f8b61f3-1ce3-46a5-a566-9dbdeb95c926"
+                        }
+                    ],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "06db3926-94eb-4188-943e-67077a70d446",
+                    "x": 5,
+                    "y": 16
                 }
             ],
             "triggers": [],
@@ -6054,6 +6028,19 @@
                                             "objPalette": "OBP0",
                                             "paletteIndex": 0,
                                             "priority": false
+                                        },
+                                        {
+                                            "id": "3007e884-26d4-48a5-8055-91c874b5bba4",
+                                            "x": 8,
+                                            "y": 0,
+                                            "sliceX": 0,
+                                            "sliceY": -8,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
                                         }
                                     ]
                                 }
@@ -6544,13 +6531,103 @@
     ],
     "customEvents": [
         {
-            "id": "312dfabb-c5e2-4870-a738-3cc676485ec5",
-            "name": "Tractor Beam",
-            "description": "Shoots a beam downward from the flying saucer and levitates objects that are caught in it.",
-            "variables": {},
-            "actors": {},
-            "symbol": "script_1",
-            "script": []
+            "id": "ffff0481-aef8-4be9-90cb-e26caafc2dec",
+            "name": "Object Tractor Beam",
+            "description": "Lifts the object up when caught in the tractor beam. Object falls down if it is not in the tractor beam.",
+            "variables": {
+                "V0": {
+                    "id": "V0",
+                    "name": "TractorBeamActive",
+                    "passByReference": false
+                },
+                "V1": {
+                    "id": "V1",
+                    "name": "ObjectPositionX",
+                    "passByReference": true
+                }
+            },
+            "actors": {
+                "0": {
+                    "id": "0",
+                    "name": "Object"
+                }
+            },
+            "symbol": "script_2",
+            "script": [
+                {
+                    "command": "EVENT_IF_TRUE",
+                    "args": {
+                        "variable": "V0",
+                        "__collapseElse": false
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_IF_EXPRESSION",
+                                "args": {
+                                    "expression": "abs($V1$ - $01$) <= 1",
+                                    "__collapseElse": false
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                                            "args": {
+                                                "actorId": "0",
+                                                "x": 0,
+                                                "y": -1,
+                                                "moveType": "horizontal",
+                                                "useCollisions": true
+                                            },
+                                            "id": "198e41fa-d391-4fa2-960d-4efc4285bfe9"
+                                        }
+                                    ],
+                                    "false": [
+                                        {
+                                            "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                                            "args": {
+                                                "actorId": "0",
+                                                "x": 0,
+                                                "y": 1,
+                                                "moveType": "horizontal",
+                                                "useCollisions": true,
+                                                "__comment": false,
+                                                "__collapse": false
+                                            },
+                                            "id": "2fb5b32f-5d1e-4eb6-9a5e-3666bf3f316f"
+                                        }
+                                    ]
+                                },
+                                "id": "72390895-4f98-4b35-b8d6-c90697201ebc"
+                            }
+                        ],
+                        "false": [
+                            {
+                                "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                                "args": {
+                                    "actorId": "0",
+                                    "x": 0,
+                                    "y": 1,
+                                    "moveType": "horizontal",
+                                    "useCollisions": true,
+                                    "__comment": false
+                                },
+                                "id": "20786124-b11e-4aa4-9264-ce94b1a15417"
+                            }
+                        ]
+                    },
+                    "id": "f1a0b3bd-f5c9-4846-a3b6-b5cd798d729e"
+                },
+                {
+                    "command": "EVENT_ACTOR_GET_POSITION",
+                    "args": {
+                        "actorId": "0",
+                        "vectorX": "V1",
+                        "vectorY": "V0"
+                    },
+                    "id": "ad934008-9b19-4dac-86b8-8b1cb4cabc6c"
+                }
+            ]
         }
     ],
     "music": [
@@ -6664,6 +6741,11 @@
             "id": "2",
             "name": "boxPositionX",
             "symbol": "var_boxpositionx"
+        },
+        {
+            "id": "3",
+            "name": "box2PositionX",
+            "symbol": "var_box2positionx"
         }
     ],
     "engineFieldValues": [
@@ -6731,7 +6813,8 @@
         "batterylessEnabled": false,
         "favoriteEvents": [
             "EVENT_TEXT",
-            "EVENT_SWITCH_SCENE"
+            "EVENT_SWITCH_SCENE",
+            "EVENT_CALL_CUSTOM_EVENT"
         ],
         "defaultFadeStyle": "white",
         "playerSpriteSheetId": "581d34d0-9591-4e6e-a609-1d94f203b0cd"
