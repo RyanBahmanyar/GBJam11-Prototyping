@@ -392,11 +392,84 @@
                     "paletteId": "",
                     "isPinned": false,
                     "persistent": false,
-                    "collisionGroup": "",
                     "symbol": "actor_0",
                     "script": [],
                     "startScript": [],
-                    "updateScript": [],
+                    "updateScript": [
+                        {
+                            "command": "EVENT_IF_TRUE",
+                            "args": {
+                                "variable": "0",
+                                "__collapseElse": false
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_IF_EXPRESSION",
+                                        "args": {
+                                            "expression": "abs($02$ - $01$) <= 1",
+                                            "__collapseElse": false
+                                        },
+                                        "children": {
+                                            "true": [
+                                                {
+                                                    "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                                                    "args": {
+                                                        "actorId": "$self$",
+                                                        "x": 0,
+                                                        "y": -1,
+                                                        "moveType": "horizontal",
+                                                        "useCollisions": true
+                                                    },
+                                                    "id": "ccbcd35d-3d31-4c5d-8434-599d0430eeec"
+                                                }
+                                            ],
+                                            "false": [
+                                                {
+                                                    "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                                                    "args": {
+                                                        "actorId": "$self$",
+                                                        "x": 0,
+                                                        "y": 1,
+                                                        "moveType": "horizontal",
+                                                        "useCollisions": true,
+                                                        "__comment": false,
+                                                        "__collapse": false
+                                                    },
+                                                    "id": "ef83be04-e233-40d4-ac66-dc5ba6ce2be4"
+                                                }
+                                            ]
+                                        },
+                                        "id": "45b3c90d-f26e-4bc9-bbd8-736413cd90f9"
+                                    }
+                                ],
+                                "false": [
+                                    {
+                                        "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                                        "args": {
+                                            "actorId": "$self$",
+                                            "x": 0,
+                                            "y": 1,
+                                            "moveType": "horizontal",
+                                            "useCollisions": true,
+                                            "__comment": false
+                                        },
+                                        "id": "7ea8a905-a773-412f-905d-5e37f202dc86"
+                                    }
+                                ]
+                            },
+                            "id": "99cee802-c2e1-48eb-8d03-d836e46a7251"
+                        },
+                        {
+                            "command": "EVENT_ACTOR_GET_POSITION",
+                            "args": {
+                                "actorId": "$self$",
+                                "vectorX": "2",
+                                "vectorY": "L0"
+                            },
+                            "id": "835923f3-a905-4170-ad5c-d06c1b7df6e8"
+                        }
+                    ],
                     "hit1Script": [],
                     "hit2Script": [],
                     "hit3Script": [],
@@ -446,7 +519,7 @@
                                 },
                                 "y": {
                                     "type": "number",
-                                    "value": 16
+                                    "value": 17
                                 },
                                 "__collapse": false
                             },
@@ -467,7 +540,7 @@
                     "hit3Script": [],
                     "id": "2c3759bf-1b4b-4336-a4f5-a31ec780440b",
                     "x": 9,
-                    "y": 16
+                    "y": 17
                 }
             ],
             "triggers": [],
@@ -5397,7 +5470,7 @@
             "boundsX": 0,
             "boundsY": 0,
             "boundsWidth": 0,
-            "boundsHeight": 0,
+            "boundsHeight": 112,
             "animSpeed": 15
         },
         {
@@ -6578,6 +6651,11 @@
             "id": "1",
             "name": "PlayerPositionX",
             "symbol": "var_playerpositionx"
+        },
+        {
+            "id": "2",
+            "name": "boxPositionX",
+            "symbol": "var_boxpositionx"
         }
     ],
     "engineFieldValues": [
@@ -6595,8 +6673,8 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 883.2000122070312,
-        "worldScrollY": 672,
+        "worldScrollX": 879.2000122070312,
+        "worldScrollY": 548.7999877929688,
         "zoom": 400,
         "customColorsEnabled": true,
         "sgbEnabled": false,
